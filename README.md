@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# React-mail-sending-App
+
+A simple react form, fill in your mail and text, receive them in your mailbox 🌟
+
+<hr>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

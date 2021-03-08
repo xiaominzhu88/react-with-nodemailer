@@ -1,0 +1,8 @@
+@import './variables.scss';
+
+.App {
+	text-align: center;
+	background-color: $secondary-color;
+	padding: 10px;
+	font-family: $font-family-monospace;
+}

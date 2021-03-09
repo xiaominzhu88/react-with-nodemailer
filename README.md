@@ -1,10 +1,10 @@
 # React-nodemailer-App
 
-<img src='public/screenshot.png' alt='screenshot' width='100px' height='100px' align='right' />
+<img src='public/screenshot.png' alt='screenshot' width='120px' height='120px' align='right' />
 
-## Sending email fun
+## Sending email with fun 📨
 
-A simple react email sending form using nodemailer, fill in your mail and text, receive them in your mailbox 🌟
+A simple react email sending Form using **nodemailer**, fill in your name, email and text, receive confirmation in your mailbox 🌟
 
 <hr>
 

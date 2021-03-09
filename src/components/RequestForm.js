@@ -3,7 +3,14 @@ import styles from './RequestForm.module.scss';
 import { Input } from 'reakit/Input';
 import { Button } from 'reakit/Button';
 
-const RequestForm = ({ email, message, setEmail, setMessage }) => {
+const RequestForm = ({
+	name,
+	email,
+	message,
+	setName,
+	setEmail,
+	setMessage,
+}) => {
 	const submit = () => {
 		fetch('/send', {
 			method: 'post',
@@ -13,6 +20,7 @@ const RequestForm = ({ email, message, setEmail, setMessage }) => {
 			body: JSON.stringify({
 				email,
 				message,
+				name,
 			}),
 		})
 			.then((res) => console.log(res))
@@ -20,11 +28,23 @@ const RequestForm = ({ email, message, setEmail, setMessage }) => {
 			.then(() => {
 				setEmail('');
 				setMessage('');
+				setName('');
 			})
 			.catch((err) => console.log(err));
 	};
 	return (
 		<div className={styles.form}>
+			<div className={styles.name}>
+				<label className={styles.label}>Your Name</label>
+				<Input
+					type="text"
+					className={styles.input}
+					placeholder="enter your name"
+					onChange={(e) => setName(e.target.value)}
+					value={name}
+					required
+				/>
+			</div>
 			<div className={styles.mail}>
 				<label className={styles.label}>Your Email</label>
 				<Input

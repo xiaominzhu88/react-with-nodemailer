@@ -5,6 +5,7 @@ import RequestForm from './components/RequestForm';
 function App() {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+	const [name, setName] = useState('');
 
 	return (
 		<div className="App">
@@ -12,10 +13,12 @@ function App() {
 				<p>📨</p>
 			</header>
 			<RequestForm
+				setName={setName}
 				setEmail={setEmail}
 				setMessage={setMessage}
 				email={email}
 				message={message}
+				name={name}
 			/>
 		</div>
 	);

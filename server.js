@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
-const { USER, PASSWORD } = require('./config/keys');
+const { USER, PASSWORD, SENDER } = require('./config/keys');
 
 const PORT = process.env.PORT || 8080;
 
@@ -25,11 +25,11 @@ app.post('/send', (req, res) => {
 
 	transporter
 		.sendMail({
-			from: 'minizhu8888@gmail.com',
+			from: `${SENDER} 🐶`,
 			to: email,
 			date: new Date('2000-01-01 00:00:00'),
 			subject: 'Sending Fun 🌟',
-			html: `<b style='color:red;'>Hello from Mini :)</b><br /><p >Your name: </p><p style='color:darkblue'> ${name}</p><br /><p>Your message:</p><p style='color:darkblue;'>${message}</p>`,
+			html: `<b style='color:red;'>Hello from Mini :)</b><br /><p >Your Name: </p><p style='color:darkblue'> ${name}</p><br /><p>Your Message:</p><p style='color:darkblue;'>${message}</p>`,
 		})
 		.then((resp) => {
 			res.json({ resp });

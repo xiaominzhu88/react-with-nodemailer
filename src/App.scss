@@ -5,4 +5,11 @@
 	background-color: $secondary-color;
 	padding: 10px;
 	font-family: $font-family-monospace;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#animation-logo {
+	order: 2;
 }

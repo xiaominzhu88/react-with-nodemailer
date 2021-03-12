@@ -42,7 +42,10 @@ const RequestForm = ({
 					type="text"
 					className={styles.input}
 					placeholder="enter your name"
-					onChange={(e) => setName(e.target.value)}
+					onChange={(e) => {
+						setName(e.target.value);
+						console.log('name: ', name);
+					}}
 					value={name}
 					name="name"
 					required
